@@ -1,0 +1,4 @@
+main: net.hauc3.hauc3raft.HauC3raft
+version: 1.0
+name: HauC3raft
+api-version: 1.20
