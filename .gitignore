@@ -169,8 +169,11 @@ Temporary Items
 .apdisk
 
 movejar.sh
+movejar.ps1
 run/
 build/
 gradle/
 .gradle/
 .idea/
+gradlew
+gradlew.bat

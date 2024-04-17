@@ -7,6 +7,12 @@ plugins {
 // See https://purpurmc.org/docs/purpur/ for the latest version
 var purpurVersion = '1.20.1-R0.1-SNAPSHOT'
 
+// See https://hangar.papermc.io/pianoman911/MapEngine/versions for the latest version
+var mapEngineVersion = '1.7.3'
+
+// See https://hangar.papermc.io/pianoman911/MapEngine-MediaExtension/versions for the latest version
+var mapEngineMediaExtVersion = '1.1.2'
+
 // See https://kotlinlang.org/docs/home.html for the latest version
 var kotlinVersion = '1.9.23'
 
@@ -24,10 +30,16 @@ repositories {
         name = 'sonatype'
         url = 'https://oss.sonatype.org/content/groups/public/'
     }
+    maven {
+        name = 'tjcserver'
+        url = 'https://repo.thejocraft.net/releases/'
+    }
 }
 
 dependencies {
     compileOnly 'org.purpurmc.purpur:purpur-api:' + purpurVersion
+    compileOnly 'de.pianoman911:mapengine-api:' + mapEngineVersion
+    compileOnly 'de.pianoman911:mapengine-mediaext:' + mapEngineMediaExtVersion
     shadow "org.jetbrains.kotlin:kotlin-stdlib:" + kotlinVersion
 }
 
