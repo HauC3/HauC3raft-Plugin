@@ -2,8 +2,7 @@ main: net.hauc3.hauc3raft.HauC3raft
 version: 1.0
 name: HauC3raft
 api-version: 1.20
-depend: [MapEngine, MapMediaExt]
-#depend: [LuckPerms, PremiumVanish, ProtocolLib]
+depend: [MapEngine, MapMediaExt, LuckPerms, PremiumVanish, ProtocolLib, PlasmoVoice]
 commands:
   mod:
     description: feck you

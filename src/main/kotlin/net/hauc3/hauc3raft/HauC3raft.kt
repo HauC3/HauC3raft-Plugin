@@ -1,7 +1,6 @@
 package net.hauc3.hauc3raft
 
 import de.pianoman911.mapengine.api.MapEngineApi
-import de.pianoman911.mapengine.api.drawing.IDrawingSpace
 import de.pianoman911.mapengine.api.util.Converter
 import de.pianoman911.mapengine.media.movingimages.FFmpegFrameSource
 import net.hauc3.hauc3raft.commands.ModCommand
@@ -12,7 +11,6 @@ import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerJoinEvent
-import org.bukkit.event.player.PlayerQuitEvent
 import org.bukkit.plugin.java.JavaPlugin
 import org.bukkit.util.BlockVector
 import java.net.URI

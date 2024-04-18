@@ -16,6 +16,18 @@ var mapEngineMediaExtVersion = '1.1.2'
 // See https://kotlinlang.org/docs/home.html for the latest version
 var kotlinVersion = '1.9.23'
 
+// See https://central.sonatype.com/artifact/net.luckperms/api/versions for the latest version
+var luckPermsVersion = '5.4'
+
+// See https://repo.dmulloy2.net/repository/public/com/comphenix/protocol/ProtocolLib/maven-metadata.xml for the latest version
+var protocolLibVersion = '5.1.0'
+
+// See https://plasmovoice.com/docs/api/ for the latest version
+var plasmoVoiceVersion = '2.1.0-SNAPSHOT'
+
+// See https://jitpack.io/#LeonMangler/SuperVanish for the latest version
+var premiumVanishVersion = '6.2.18-3'
+
 // Change this to your package name
 group = 'net.hauc3.hauc3raft'
 version = '1.0'
@@ -34,12 +46,32 @@ repositories {
         name = 'tjcserver'
         url = 'https://repo.thejocraft.net/releases/'
     }
+    maven {
+        name = 'dmulloy2'
+        url = 'https://repo.dmulloy2.net/repository/public/'
+    }
+    maven {
+        name = 'plasmoverse-releases'
+        url = 'https://repo.plasmoverse.com/releases'
+    }
+    maven {
+        name = 'plasmoverse-snapshots'
+        url = 'https://repo.plasmoverse.com/snapshots'
+    }
+    maven {
+        name = 'jitpack'
+        url = 'https://jitpack.io'
+    }
 }
 
 dependencies {
     compileOnly 'org.purpurmc.purpur:purpur-api:' + purpurVersion
     compileOnly 'de.pianoman911:mapengine-api:' + mapEngineVersion
     compileOnly 'de.pianoman911:mapengine-mediaext:' + mapEngineMediaExtVersion
+    compileOnly 'net.luckperms:api:' + luckPermsVersion
+    compileOnly 'com.comphenix.protocol:ProtocolLib:' + protocolLibVersion
+    compileOnly 'su.plo.voice.api:server:' + plasmoVoiceVersion
+    compileOnly 'com.github.LeonMangler:SuperVanish:' + premiumVanishVersion
     shadow "org.jetbrains.kotlin:kotlin-stdlib:" + kotlinVersion
 }
 
