@@ -1,4 +1,4 @@
-package net.hauc3.hauc3raft
+package net.hauc3.hauc3raft.plus
 
 import de.pianoman911.mapengine.api.MapEngineApi
 import de.pianoman911.mapengine.api.util.Converter
