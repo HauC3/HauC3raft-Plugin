@@ -3,8 +3,6 @@ package net.hauc3.hauc3raft
 import de.pianoman911.mapengine.api.MapEngineApi
 import de.pianoman911.mapengine.api.util.Converter
 import de.pianoman911.mapengine.media.movingimages.FFmpegFrameSource
-import net.hauc3.hauc3raft.commands.ModCommand
-import net.hauc3.hauc3raft.listeners.PlayerMoveEventListener
 import org.bukkit.Bukkit
 import org.bukkit.block.BlockFace
 import org.bukkit.entity.Player
@@ -26,8 +24,6 @@ class HauC3raft: JavaPlugin(), Listener {
 
         mapEngine = Bukkit.getServicesManager().load(MapEngineApi::class.java)!!
 
-        getCommand("mod")?.setExecutor(ModCommand())
-        server.pluginManager.registerEvents(PlayerMoveEventListener(), this)
         server.pluginManager.registerEvents(this, this)
     }
 
@@ -35,7 +31,7 @@ class HauC3raft: JavaPlugin(), Listener {
         logger.info("spawning display for " + viewer.name)
 
         // create a map display instance
-        val display = mapEngine.displayProvider().createBasic(BlockVector(-1, 117, -10), BlockVector(5, 120, -10), BlockFace.SOUTH)
+        val display = mapEngine.displayProvider().createBasic(BlockVector(42, 34, -69), BlockVector(48, 37, -69), BlockFace.SOUTH)
         display.spawn(viewer) // spawn the map display for the player
 
         // create an input pipeline element
