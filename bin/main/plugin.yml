@@ -1,5 +1,5 @@
 main: net.hauc3.hauc3raft.HauC3raft
-version: 1.2
+version: 1.1
 name: HauC3raft
 api-version: '1.21.4'
 depend: [MapEngine, MapMediaExt, LuckPerms, PremiumVanish, ProtocolLib, PlasmoVoice, Citizens]

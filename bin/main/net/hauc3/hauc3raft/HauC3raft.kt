@@ -3,14 +3,14 @@ package net.hauc3.hauc3raft
 import de.pianoman911.mapengine.api.MapEngineApi
 import de.pianoman911.mapengine.api.util.Converter
 import de.pianoman911.mapengine.media.movingimages.FFmpegFrameSource
+import jdk.jfr.Registered
 import net.citizensnpcs.api.event.CitizensEnableEvent
 import net.citizensnpcs.api.CitizensAPI
-import net.citizensnpcs.api.trait.TraitInfo
 import net.hauc3.hauc3raft.commands.ModCommand
 import net.hauc3.hauc3raft.listeners.PlayerMoveEventListener
 import net.hauc3.hauc3raft.listeners.PlayerNodeChangeListener
-import net.hauc3.hauc3raft.traits.HauC3InvisibleTrait
 import net.luckperms.api.LuckPerms
+import net.luckperms.api.LuckPermsProvider
 import org.bukkit.Bukkit
 import org.bukkit.block.BlockFace
 import org.bukkit.entity.Player
@@ -42,7 +42,6 @@ class HauC3raft: JavaPlugin(), Listener {
             PlayerNodeChangeListener(this, luckPerms).register()
             this.server.pluginManager.registerEvents(PlayerMoveEventListener(), this)
             this.getCommand("mod")?.setExecutor(ModCommand())
-            CitizensAPI.getTraitFactory().registerTrait(TraitInfo.create(HauC3InvisibleTrait::class.java).withName("hauc3invisible"))
             server.pluginManager.registerEvents(this, this)
         } else {
             try {
@@ -86,6 +85,7 @@ class HauC3raft: JavaPlugin(), Listener {
 
     @EventHandler
     fun onCitizensEnable(event: CitizensEnableEvent) {
+        // val npc: NPC = CitizensAPI.getNPCRegistry().getNPC()
         logger.info("Citizens has been enabled")
     }
 }

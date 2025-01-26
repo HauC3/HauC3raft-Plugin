@@ -14,16 +14,12 @@ class PlayerMoveEventListener : Listener {
         if (event.to.world.environment == World.Environment.NORMAL) {
             if (LocalDateTime.now(ZoneId.of("America/Chicago")).dayOfWeek == DayOfWeek.TUESDAY) {
                 val positions = arrayOf(
-                    intArrayOf(-7, 65, 20),
-                    intArrayOf(-8, 65, 20),
-                    intArrayOf(-9, 65, 20),
-                    intArrayOf(-7, 65, 19),
-                    intArrayOf(-8, 65, 19),
-                    intArrayOf(-9, 65, 19),
-                    intArrayOf(-10, 65, 19),
-                    intArrayOf(-8, 65, 18),
-                    intArrayOf(-9, 65, 18),
-                    intArrayOf(-10, 65, 18)
+                    intArrayOf(4, 115, -6),
+                    intArrayOf(5, 115, -6),
+                    intArrayOf(6, 115, -6),
+                    intArrayOf(4, 115, -7),
+                    intArrayOf(5, 115, -7),
+                    intArrayOf(5, 115, -8)
                 )
 
                 for (position in positions) {
