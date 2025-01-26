@@ -1,5 +1,10 @@
-main: net.hauc3.hauc3raft.plus.HauC3raft
-version: 1.0
-name: HauC3raft-Plus-Edition-Because-I-Lost-The-Code-To-The-Old-Version-Somehow-Also-This-Plugin-Requires-The-Old-Version-To-Be-Installed
-api-version: 1.20
-depend: [MapEngine, MapMediaExt, LuckPerms, PremiumVanish, ProtocolLib, PlasmoVoice, HauC3raft]
+main: net.hauc3.hauc3raft.HauC3raft
+version: 1.1
+name: HauC3raft
+api-version: '1.21.4'
+depend: [MapEngine, MapMediaExt, LuckPerms, PremiumVanish, ProtocolLib, PlasmoVoice]
+commands:
+  mod:
+    description: fuck you
+    usage: /mod [username]
+    permission: hauc3raft.mod

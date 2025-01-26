@@ -30,7 +30,7 @@ var premiumVanishVersion = '6.2.19'
 
 // Change this to your package name
 group = 'net.hauc3.hauc3raft'
-version = '1.0'
+version = '1.1'
 
 repositories {
     mavenCentral()
